@@ -216,7 +216,10 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
           }
         }
       });
-
+      // Added by cadsdev to allow use of drilldown module
+      if(config.drilldown) {
+        mergedOptions.drilldown = config.drilldown;
+      }    
       if(config.title) {
         mergedOptions.title = config.title;
       }
